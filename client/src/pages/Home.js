@@ -73,9 +73,9 @@ class Home extends Component {
           <Col size="md-12">
             <Card title="Book Search" icon="far fa-book">
               <Form
-                handleInputChange={/* YOUR CODE HERE */}
-                handleFormSubmit={/* YOUR CODE HERE */}
-                q={/* YOUR CODE HERE */}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+                q={this.state.q}
               />
             </Card>
           </Col>
@@ -83,8 +83,8 @@ class Home extends Component {
         <Row>
           <Col size="md-12">
             <Card title="Results">
-              {/* Render the arrays of books in this.state. If the array is empty, display the message in this.state */}
-              {/* YOUR CODE HERE */}
+              {this.state.books.length}
+              {this.state.books.map}
             </Card>
           </Col>
         </Row>
