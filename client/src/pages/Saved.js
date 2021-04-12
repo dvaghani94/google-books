@@ -51,21 +51,22 @@ class Saved extends Component {
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map((book) => (
-                    <Book 
-                    key={book._id}
-                    title={book.title}
-                    subtitle={book.subtitle}
-                    link={book.link}
-                    authors={book.authors.join(", ")}
-                    description={book.description}
-                    image={book.image}
-                    Button={() => (
-                      <button 
-                      onClick={() => this.handleBookDelete(book._id)}
-                      className="btn btn-danger ml-2">
-                        Delete
-                      </button>
-                    )}
+                    <Book
+                      key={book._id}
+                      title={book.title}
+                      subtitle={book.subtitle}
+                      link={book.link}
+                      authors={book.authors.join(", ")}
+                      description={book.description}
+                      image={book.image}
+                      Button={() => (
+                        <button
+                          onClick={() => this.handleBookDelete(book._id)}
+                          className="btn btn-danger ml-2"
+                        >
+                          Delete
+                        </button>
+                      )}
                     />
                   ))}
                 </List>
