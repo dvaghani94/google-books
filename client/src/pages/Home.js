@@ -85,9 +85,8 @@ class Home extends Component {
             <Card title="Results">
               {this.state.books.length ? (
                 <List>
-                  {this.state.books.map(
-                    (book) => (
-                      <Book
+                  {this.state.books.map((book) => (
+                    <Book
                       key={book.id}
                       title={book.volumeInfo.title}
                       subtitle={book.volumeInfo.subtitle}
@@ -98,18 +97,16 @@ class Home extends Component {
                       Button={() => (
                         <button
                           onClick={() => this.handleBookSave(book.id)}
-                          className="btn btn-primary ml-2">
-                            Save
-                          </button>
+                          className="btn btn-primary ml-2"
+                        >
+                          Save
+                        </button>
                       )}
-                      />
-                    )
-                  )}
+                    />
+                  ))}
                 </List>
               ) : (
-                <h5 className="text-center">
-                  {this.state.message}
-                </h5>
+                <h5 className="text-center">{this.state.message}</h5>
               )}
             </Card>
           </Col>
